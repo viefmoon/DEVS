@@ -18,7 +18,7 @@
 CREATE TABLE IF NOT EXISTS profiles (
   id uuid PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
   email text NOT NULL,
-  role text NOT NULL CHECK (role IN ('admin', 'operator', 'viewer')) DEFAULT 'viewerss',
+  role text NOT NULL CHECK (role IN ('admin', 'operator', 'viewer')) DEFAULT 'viewersss',
   created_at timestamptz DEFAULT now(),
   updated_at timestamptz DEFAULT now()
 );
